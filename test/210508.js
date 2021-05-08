@@ -1,6 +1,15 @@
-let a = 10
-let b = a % 2
-if (b)
-    console.log(a, '為奇數')
-else
-    console.log(a, '為偶')
+let a = 81
+let b = Math.floor(a / 10)
+let c
+switch (b) {
+    case 10:
+    case 9:
+        c = 'A'
+        break;
+    case 8:
+        c = 'B'
+        break;
+    default:
+        c = 'C'
+}
+console.log(a, c)
