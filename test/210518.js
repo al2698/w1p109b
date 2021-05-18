@@ -1,4 +1,4 @@
-let i;
+let i = 0;
 while (true) {
     i++;
     let num = Math.floor(Math.random() * 10);
