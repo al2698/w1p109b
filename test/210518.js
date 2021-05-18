@@ -1,8 +1,8 @@
-let i = 0;
+let i = 0, num;
 do {
     i++;
-    let num = Math.floor(Math.random() * 10);
+    num = Math.floor(Math.random() * 10);
     console.log(num);
-} while (num !== 5)
+} while (num =! 5);
 console.log("i hit 5... QAQ", i);
 
