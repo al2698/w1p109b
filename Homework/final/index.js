@@ -306,7 +306,7 @@
 				type: 2,
 				frames: 10,
 				speed: 0.5,
-				timeout: Math.floor(Math.random() * 120),
+				timeout: Math.floor(Math.random() * 10),
 				update: function () {
 					var new_map;
 					if (this.status == 3 && !this.timeout) {
@@ -314,6 +314,7 @@
 					}
 					if (!this.coord.offset) {			//到达坐标中心时计算
 						if (this.status == 1) {
+							this.speed = 0.5;
 							if (!this.timeout) {		//定时器
 								new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g, 0));
 								var id = this._id;
@@ -332,6 +333,7 @@
 								}
 							}
 						} else if (this.status == 3) {
+							this.speed = 0.25;
 							new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g, 0));
 							var id = this._id;
 							items.forEach(function (item) {
@@ -504,23 +506,23 @@
 					break;
 				case 39:
 				case 68:
-				//case 100: //右
+					//case 100: //右
 					player.control = { orientation: 0 };
 					break;
 
 				case 40: //下
 				case 83:
-				//case 115:
+					//case 115:
 					player.control = { orientation: 1 };
 					break;
 				case 37:
 				case 65:
-				//case 97: //左
+					//case 97: //左
 					player.control = { orientation: 2 };
 					break;
 				case 38: //上
 				case 87:
-				//case 119:
+					//case 119:
 					player.control = { orientation: 3 };
 					break;
 			}
