@@ -225,6 +225,12 @@
 			data: _DATA,
 			frames: 8,
 			draw: function (context) {
+				if (_TIME % 15) {
+					var a = Math.floor((Math.random() * 26) + 1);
+					var b = Math.floor((Math.random() * 29) + 1);
+					while (!(_GOODS[i + ',' + j]))
+						a = Math.floor((Math.random() * 26) + 1), b = Math.floor((Math.random() * 29) + 1);
+				}
 				for (var j = 0; j < this.y_length; j++) {
 					for (var i = 0; i < this.x_length; i++) {
 						if (!this.get(i, j)) {
