@@ -19,7 +19,7 @@ if (!Date.now)
         var lastTime = 0;
         window.requestAnimationFrame = function (callback) {
             var now = Date.now();
-            var nextTime = Math.max(lastTime + 1, now);
+            var nextTime = Math.max(lastTime + 5, now);
             return setTimeout(function () { callback(lastTime = nextTime); },
                 nextTime - now);
         };

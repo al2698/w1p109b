@@ -305,7 +305,7 @@
 				vector: { x: 12 + i, y: 14 },
 				type: 2,
 				frames: 10,
-				speed: 0.25,
+				speed: 0.5,
 				timeout: Math.floor(Math.random() * 120),
 				update: function () {
 					var new_map;
