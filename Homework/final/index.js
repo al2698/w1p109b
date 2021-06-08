@@ -40,12 +40,18 @@
 			'26,23': 1
 		},
 		_WIN = false,
-		_TIME,
+		_NPC = 4,		//NPC數量
 		_COS = [1, 0, -1, 0],
 		_SIN = [0, 1, 0, -1],
 		_COLOR = ['#F00', '#F93', '#0CF', '#F9C'],//红,橙,
 		_LIFE = 3,
 		_SCORE = 0;		//得分
+
+	var _TIMER = setInterval(myTimer, 1000);
+	var d = 1, t = 0;
+	function myTimer() {
+		t += d;
+	}
 
 	var game = new Game('canvas');
 	//启动页
@@ -225,12 +231,6 @@
 			data: _DATA,
 			frames: 8,
 			draw: function (context) {
-				if (_TIME % 15) {
-					var a = Math.floor((Math.random() * 26) + 1);
-					var b = Math.floor((Math.random() * 29) + 1);
-					while (!(_GOODS[i + ',' + j]))
-						a = Math.floor((Math.random() * 26) + 1), b = Math.floor((Math.random() * 29) + 1);
-				}
 				for (var j = 0; j < this.y_length; j++) {
 					for (var i = 0; i < this.x_length; i++) {
 						if (!this.get(i, j)) {
@@ -264,6 +264,22 @@
 				context.textBaseline = 'top';
 				context.fillStyle = '#FFF';
 				context.fillText(_SCORE, this.x + 12, this.y);
+			}
+		});
+		stage.createItem({
+			x: 690,
+			y: 200,
+			draw: function (context) {
+				context.font = 'bold 28px Helvetica';
+				context.textAlign = 'left';
+				context.textBaseline = 'bottom';
+				context.fillStyle = '#C33';
+				context.fillText('Times', this.x, this.y);
+				context.font = '28px Helvetica';
+				context.textAlign = 'left';
+				context.textBaseline = 'top';
+				context.fillStyle = '#FFF';
+				context.fillText(t, this.x + 12, this.y);
 			}
 		});
 		//状态文字
@@ -300,7 +316,8 @@
 			}
 		});
 		//NPC
-		for (var i = 0; i < 2; i++) {
+		for (var i = 0; i < _NPC; i++) 
+		{
 			stage.createItem({
 				width: 30,
 				height: 30,
@@ -311,8 +328,9 @@
 				vector: { x: 12 + i, y: 14 },
 				type: 2,
 				frames: 10,
-				speed: 0.5,
+				speed: 0,
 				timeout: Math.floor(Math.random() * 10),
+				
 				update: function () {
 					var new_map;
 					if (this.status == 3 && !this.timeout) {
@@ -448,7 +466,7 @@
 			location: map,
 			coord: { x: 13.5, y: 23 },
 			orientation: 2,
-			speed: 0.5,
+			speed: 0.625,
 			frames: 10,
 			update: function () {
 				var coord = this.coord;
@@ -470,7 +488,7 @@
 				} else {
 					if (!beans.get(this.coord.x, this.coord.y)) {	//吃豆
 						_SCORE++;
-						beans.set(this.coord.x, this.coord.y, 1);
+						beans.set(this.coord.x, this.coord.y, 3);
 						if (_GOODS[this.coord.x + ',' + this.coord.y]) {	//吃到能量豆
 							items.forEach(function (item) {
 								if (item.status == 1 || item.status == 3) {	//如果NPC为正常状态，则置为临时状态
@@ -509,6 +527,7 @@
 				case 13: //回车
 				case 32: //空格
 					this.status = this.status == 2 ? 1 : 2;
+					d = d == 1 ? 0 : 1;
 					break;
 				case 39:
 				case 68:
@@ -572,6 +591,7 @@
 					_SCORE = 0;
 					_TIME = 0;
 					_LIFE = 3;
+					_NPC = 0;
 					_WIN = false;
 					var st = game.setStage(1);
 					st.reset();
