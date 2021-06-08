@@ -37,6 +37,10 @@
 			'1,3': 1,
 			'26,3': 1,
 			'1,23': 1,
+			'18,17': 1,
+			'9,11': 1,
+			'8,29': 1,
+			'19,5': 1,
 			'26,23': 1
 		},
 		_WIN = false,
@@ -466,7 +470,7 @@
 			location: map,
 			coord: { x: 13.5, y: 23 },
 			orientation: 2,
-			speed: 0.625,
+			speed: 0.5,
 			frames: 10,
 			update: function () {
 				var coord = this.coord;
@@ -593,6 +597,7 @@
 					_LIFE = 3;
 					_NPC = 0;
 					_WIN = false;
+					t = 0;
 					var st = game.setStage(1);
 					st.reset();
 					break;
