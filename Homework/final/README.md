@@ -16,7 +16,7 @@ stage.bind('keydown', function (e) {
 				case 13: //ENTER
 				case 32: //空格
 					this.status = this.status == 2 ? 1 : 2;
-					d = d == 1 ? 0 : 1;
+					d = !d;
 					break;
 				case 39:
 				case 68:
@@ -41,4 +41,19 @@ stage.bind('keydown', function (e) {
 					break;
 			}
 		});
+```
+2.新增Timer
+```js
+var _TIMER = setInterval(myTimer, 1000);
+	var d = 1, t = 0;
+	function myTimer() {
+		t += d;
+	}
+```
+```js
+var _TIMER = setInterval(myTimer, 1000);
+	var d = 1, t = 0;
+	function myTimer() {
+		t += d;
+	}
 ```
