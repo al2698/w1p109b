@@ -528,10 +528,10 @@
 		//事件绑定
 		stage.bind('keydown', function (e) {
 			switch (e.keyCode) {
-				case 13: //回车
+				case 13: //ENTER
 				case 32: //空格
 					this.status = this.status == 2 ? 1 : 2;
-					d = d == 1 ? 0 : 1;
+					d = !d;
 					break;
 				case 39:
 				case 68:
