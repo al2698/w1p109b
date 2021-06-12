@@ -71,3 +71,36 @@ stage.createItem({
 		}
 	});
 ```
+4.新增勝利條件
+```js
+var _WIN = false,
+```
+判斷勝利
+```js
+if (JSON.stringify(beans.data).indexOf(0) < 0) {	//当没有物品的时候，进入结束画面
+	_WIN = true;
+	game.nextStage();
+}
+```
+遊戲結束畫面
+```js
+//结束画面
+(function () {
+	var stage = game.createStage();
+	//游戏结束
+	stage.createItem({
+		x: game.width / 2,
+		y: game.height * .35,
+		draw: function (context) {
+			context.fillStyle = '#FFF';
+			context.font = 'bold 48px Helvetica';
+			context.textAlign = 'center';
+			context.textBaseline = 'middle';
+			if (_WIN)
+				context.fillText('YOU WIN', this.x, this.y);
+			else
+				context.fillText('GAME OVER', this.x, this.y);
+		}
+	});
+	
+```
