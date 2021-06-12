@@ -10,7 +10,7 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 * 將所有物件吃完為勝利條件
 * 吃能量豆改變小精靈速度
 ## 功能
-1.修改按鍵設定
+2.修改按鍵設定
 ```js
 stage.bind('keydown', function (e) {
 			switch (e.keyCode) {
@@ -43,7 +43,7 @@ stage.bind('keydown', function (e) {
 			}
 		});
 ```
-2.新增Timer
+3.新增Timer
 ```js
 var _TIMER = setInterval(myTimer, 1000);
 	var d = 1, t = 0;
