@@ -50,10 +50,3 @@ var _TIMER = setInterval(myTimer, 1000);
 		t += d;
 	}
 ```
-```js
-var _TIMER = setInterval(myTimer, 1000);
-	var d = 1, t = 0;
-	function myTimer() {
-		t += d;
-	}
-```
