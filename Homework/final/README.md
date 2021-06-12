@@ -85,22 +85,21 @@ if (JSON.stringify(beans.data).indexOf(0) < 0) {	//当没有物品的时候，�
 遊戲結束畫面
 ```js
 //结束画面
-(function () {
-	var stage = game.createStage();
-	//游戏结束
-	stage.createItem({
-		x: game.width / 2,
-		y: game.height * .35,
-		draw: function (context) {
-			context.fillStyle = '#FFF';
-			context.font = 'bold 48px Helvetica';
-			context.textAlign = 'center';
-			context.textBaseline = 'middle';
-			if (_WIN)
-				context.fillText('YOU WIN', this.x, this.y);
-			else
-				context.fillText('GAME OVER', this.x, this.y);
-		}
-	});
+var stage = game.createStage();
+//游戏结束
+stage.createItem({
+	x: game.width / 2,
+	y: game.height * .35,
+	draw: function (context) {
+		context.fillStyle = '#FFF';
+		context.font = 'bold 48px Helvetica';
+		context.textAlign = 'center';
+		context.textBaseline = 'middle';
+		if (_WIN)
+			context.fillText('YOU WIN', this.x, this.y);
+		else
+			context.fillText('GAME OVER', this.x, this.y);
+	}
+});
 	
 ```
