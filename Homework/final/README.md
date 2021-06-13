@@ -92,9 +92,9 @@ if (JSON.stringify(beans.data).indexOf(0) < 0) {	//當沒有物品的時候，�
 ```
 遊戲結束畫面
 ```js
-//结束画面
+//結束畫面
 var stage = game.createStage();
-//游戏结束
+//遊戲結束
 stage.createItem({
 	x: game.width / 2,
 	y: game.height * .35,
