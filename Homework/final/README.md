@@ -12,8 +12,12 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 * 可修改NPC數量，方便增加遊戲難度系統
 ## 技術手段
 1.新增網址列小圖示ICON
-```js
+```html
+<html>
+<head>
 <link rel="shortcut icon" href="favicon.png">
+</head>
+</html>
 ```
 2.修改按鍵設定
 ```js
