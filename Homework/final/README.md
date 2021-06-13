@@ -21,7 +21,7 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 </head>
 </html>
 ```
-2.修改按鍵設定
+3.修改按鍵設定
 ```js
 stage.bind('keydown', function (e) {
 	switch (e.keyCode) {
@@ -54,7 +54,7 @@ stage.bind('keydown', function (e) {
 			}
 		});
 ```
-3.新增Timer
+4.新增Timer
 ```js
 var _TIMER = setInterval(myTimer, 1000);
 	var d = 1, t = 0;
@@ -81,7 +81,7 @@ stage.createItem({
 		}
 	});
 ```
-4.新增勝利條件
+5.新增勝利條件
 ```js
 var _WIN = false,
 ```
