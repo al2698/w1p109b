@@ -67,7 +67,7 @@
 			y: game.height * .45,
 			width: 100,
 			height: 100,
-			frames: 3,
+			frames: 12,
 			draw: function (context) {
 				var t = Math.abs(5 - this.times % 10);
 				context.fillStyle = '#FFE600';
@@ -330,7 +330,7 @@
 				coord: { x: 12 + i, y: 14 },
 				vector: { x: 12 + i, y: 14 },
 				type: 2,
-				frames: 10,
+				frames: 12,
 				speed: 0,
 				timeout: Math.floor(Math.random() * 10),
 
@@ -470,7 +470,7 @@
 			coord: { x: 13.5, y: 23 },
 			orientation: 2,
 			speed: 1,
-			frames: 10,
+			frames: 12,
 			update: function () {
 				var coord = this.coord;
 				if (!coord.offset) {
