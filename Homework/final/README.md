@@ -114,3 +114,4 @@ stage.createItem({
 });
 	
 ```
+## 想改善的點
