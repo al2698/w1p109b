@@ -85,7 +85,7 @@ var _WIN = false,
 ```
 判斷勝利
 ```js
-if (JSON.stringify(beans.data).indexOf(0) < 0) {	//当没有物品的时候，进入结束画面
+if (JSON.stringify(beans.data).indexOf(0) < 0) {	//當沒有物品的時候，進入結束畫面
 	_WIN = true;
 	game.nextStage();
 }
