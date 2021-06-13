@@ -44,7 +44,7 @@
 			'26,23': 1
 		},
 		_WIN = false,
-		_NPC = 2,		//NPC數量
+		_NPC = 4,		//NPC數量
 		_COS = [1, 0, -1, 0],
 		_SIN = [0, 1, 0, -1],
 		_COLOR = ['#F00', '#F93', '#0CF', '#F9C'],//红,橙,
@@ -341,7 +341,7 @@
 					}
 					if (!this.coord.offset) {			//到达坐标中心时计算
 						if (this.status == 1) {
-							this.speed = 1;
+							this.speed = 2;
 							if (!this.timeout) {		//定时器
 								new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g, 0));
 								var id = this._id;
@@ -360,7 +360,7 @@
 								}
 							}
 						} else if (this.status == 3) {
-							this.speed = 0.5;
+							this.speed = 1;
 							new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g, 0));
 							var id = this._id;
 							items.forEach(function (item) {
@@ -469,7 +469,7 @@
 			location: map,
 			coord: { x: 13.5, y: 23 },
 			orientation: 2,
-			speed: 1,
+			speed: 2,
 			frames: 12,
 			update: function () {
 				var coord = this.coord;
