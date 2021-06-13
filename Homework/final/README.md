@@ -128,6 +128,10 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 * 吃能量豆改變小精靈速度
 * 可修改NPC數量，方便增加遊戲難度系統
 ## 技術手段
+1.新增網址列小圖示ICON
+```js
+<link rel="shortcut icon" href="favicon.png">
+```
 2.修改按鍵設定
 ```js
 stage.bind('keydown', function (e) {
