@@ -1,4 +1,4 @@
- HEAD
+ 小精靈
 =======
 ## 來源
 本程式修改自 w3cschool.cn 的官方範例，網址如下：
@@ -224,4 +224,3 @@ stage.createItem({
 });
 	
 ```
->>>>>>> 2755ef04b759b89ee005a910ef3a8f73adaf8e9d
