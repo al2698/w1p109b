@@ -67,7 +67,7 @@
 			y: game.height * .45,
 			width: 100,
 			height: 100,
-			frames: 12,
+			frames: 10,
 			draw: function (context) {
 				var t = Math.abs(5 - this.times % 10);
 				context.fillStyle = '#FFE600';
