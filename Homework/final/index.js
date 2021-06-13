@@ -320,8 +320,7 @@
 			}
 		});
 		//NPC
-		for (var i = 0; i < _NPC; i++) 
-		{
+		for (var i = 0; i < _NPC; i++) {
 			stage.createItem({
 				width: 30,
 				height: 30,
@@ -334,7 +333,7 @@
 				frames: 10,
 				speed: 0,
 				timeout: Math.floor(Math.random() * 10),
-				
+
 				update: function () {
 					var new_map;
 					if (this.status == 3 && !this.timeout) {
