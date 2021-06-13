@@ -5,6 +5,7 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 ## 功能
 包含
 * 新增網址列小圖示ICON
+* 新增網站background
 * 按［空格］或［Enter］暫停或繼續
 * 用［W］［A］［S］［D］操縱方向
 * 新增Timer
