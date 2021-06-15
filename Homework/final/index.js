@@ -341,7 +341,7 @@
 					}
 					if (!this.coord.offset) {			//到达坐标中心时计算
 						if (this.status == 1) {
-							this.speed = 2;
+							this.speed = 1;
 							if (!this.timeout) {		//定时器
 								new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g, 0));
 								var id = this._id;
@@ -360,7 +360,7 @@
 								}
 							}
 						} else if (this.status == 3) {
-							this.speed = 1;
+							this.speed = 0.5;
 							new_map = JSON.parse(JSON.stringify(map.data).replace(/2/g, 0));
 							var id = this._id;
 							items.forEach(function (item) {
@@ -469,7 +469,7 @@
 			location: map,
 			coord: { x: 13.5, y: 23 },
 			orientation: 2,
-			speed: 2,
+			speed: 1,
 			frames: 12,
 			update: function () {
 				var coord = this.coord;
