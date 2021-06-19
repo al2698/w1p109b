@@ -18,11 +18,35 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 ```html
 <html>
 <head>
-<link rel="shortcut icon" href="favicon.png">
+	<link rel="shortcut icon" href="favicon.png">
 </head>
 </html>
 ```
-3.修改按鍵設定
+1.新增background
+```html
+<html>
+<head>
+	<style>
+		body {
+			background-image: url('background.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+		}
+	<style>
+</head>
+</html>
+```
+3.新增音樂
+```html
+<body>
+	<audio id="myAudio" controls autoplay="true" loop="true">
+	<source src="國動lemons.mp3" type="audio/mpeg">
+	</audio>
+</body>	
+```
+
+4.修改按鍵設定
 ```js
 stage.bind('keydown', function (e) {
 	switch (e.keyCode) {
@@ -55,7 +79,7 @@ stage.bind('keydown', function (e) {
 			}
 		});
 ```
-4.新增Timer
+5.新增Timer
 ```js
 var _TIMER = setInterval(myTimer, 1000);
 	var d = 1, t = 0;
@@ -82,7 +106,7 @@ stage.createItem({
 		}
 	});
 ```
-5.新增勝利條件
+6.新增勝利條件
 ```js
 var _WIN = false,
 ```
@@ -114,4 +138,6 @@ stage.createItem({
 });
 	
 ```
+7.新增 var _NPC
+
 ## 想改善的點
