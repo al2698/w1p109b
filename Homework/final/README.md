@@ -22,7 +22,8 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 </head>
 </html>
 ```
-1.新增background
+
+2.新增background
 ```html
 <html>
 <head>
@@ -37,6 +38,7 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 </head>
 </html>
 ```
+
 3.新增音樂
 ```html
 <body>
@@ -79,6 +81,7 @@ stage.bind('keydown', function (e) {
 			}
 		});
 ```
+
 5.新增Timer
 ```js
 var _TIMER = setInterval(myTimer, 1000);
@@ -106,6 +109,7 @@ stage.createItem({
 		}
 	});
 ```
+
 6.新增勝利條件
 ```js
 var _WIN = false,
@@ -136,8 +140,8 @@ stage.createItem({
 			context.fillText('GAME OVER', this.x, this.y);
 	}
 });
-	
 ```
+
 7.新增 var _NPC
 
 ## 想改善的點
