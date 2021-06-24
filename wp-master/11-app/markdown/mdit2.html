@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <textarea id="mdText" style="width:800px; height:200px; display:none;">
+# Chapter 1
+## Section 1.1 -- JavaScript
+
+JavaScript is a language for web browser. 
+
+## Section 1.2 -- css
+
+CSS is a languge for web page formatting
+
+  </textarea>
+  <!--<br/>
+  <button onclick="mdShow()">Show</button>
+  <br/>-->
+  <div id="divShow">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.6/markdown-it.js"></script>
+  <script>
+const mdIt = new window.markdownit()
+const mdText = document.getElementById('mdText')
+const divShow = document.getElementById('divShow')
+function mdShow() {
+  var md = mdText.value
+  divShow.innerHTML = mdIt.render(md)
+  // divShow.innerHTML = '<pre>'+mdText.value+'</pre>'
+}
+mdShow()
+  </script>
+</body>
+</html>
+

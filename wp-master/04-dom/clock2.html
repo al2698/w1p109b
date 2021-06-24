@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function start() {
+    showTime()
+    setInterval(showTime, 1000)
+}
+
+function showTime() {
+    var today=new Date();
+    var h=today.getHours();
+    var m=today.getMinutes();
+    var s=today.getSeconds();
+    document.getElementById('time').innerHTML = h+":"+m+":"+s;
+}
+</script>
+</head>
+
+<body onload="start()">
+
+<div id="time"></div>
+
+</body>
+</html>

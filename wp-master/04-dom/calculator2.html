@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+input { width:300px }      
+    </style>
+  </head>
+  <body>
+<script>
+  function calculate() {
+    var exp = document.getElementById('exp')
+    var result = document.getElementById('result')
+    result.innerText = eval(exp.value)
+  }
+</script>    
+    <input id="exp" type="text" value="3*5+8"/>
+     = <label id="result"></label><br/><br/>
+    <button onclick="calculate()">計算</button>
+  </body>
+</html>

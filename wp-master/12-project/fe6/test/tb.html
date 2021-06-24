@@ -1,0 +1,66 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../fe6.css"/>
+</head>
+<body>
+  <main>
+    <article>
+      <h2>商店資料</h2>
+      <table>
+        <thead><tr><th>欄位</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>商店名稱</td><td><input id="shopName" type="text" value=""/></td></tr>
+          <tr><td>地址</td><td><input id="shopAddress" type="text" value=""/></td></tr>
+          <tr><td>電話</td><td><input id="shopTel" type="text" value=""/></td></tr>
+        </tbody>
+      </table>
+      <h2>商品清單</h2>
+      <div id="products">
+      </div>
+      <h2>附加項目</h2>
+      <div id="addons">
+      </div>
+      <br/>
+      <button onclick="Setting.save()">儲存設定</button>
+      <button onclick="Shop.start()">回主選單</button>
+    </article>
+<script src="../fe6.js"></script>
+<script>
+  var shop = {
+    name: '茶舖子',
+    address: '金門縣金寧鄉安美村湖南 33 號',
+    tel: '082-333333',
+    products: [
+      {id:'紅茶', price:20},
+      {id:'綠茶', price:20}, 
+      {id:'珍珠奶茶', price:35},
+    ],
+    addons: [
+      {id:'去冰', price:0},
+      {id:'半糖', price:0}, 
+      {id:'熱', price:0},
+      {id:'加鮮奶', price:10},
+    ],
+  }
+  fe6.tb.attachTo('#products', {
+    id: 'productTable',
+    fields: ["id", "price", "deleted"],
+    titles: ["商品", "單價", "刪除"],
+    types: ["string", "number", "boolean"],
+    records: shop.products,
+    editable:true,
+  })
+  fe6.tb.attachTo('#addons', {
+    id: 'addonTable',
+    fields: ["id", "price", "deleted"],
+    titles: ["附加", "單價", "刪除"],
+    types: ["string", "number", "boolean"],
+    records: shop.addons,
+    editable:true,
+  })
+</script>
+  </main>
+</body>
+</html>

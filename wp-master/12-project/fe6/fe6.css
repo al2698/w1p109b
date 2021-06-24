@@ -1,0 +1,130 @@
+* {
+  /* line-height: 180%; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 10px;
+}
+
+main, article, table, form, pre, blockquote, div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+article {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 800px;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #336699;
+}
+
+h2 {
+  /* font-family: '標楷體', 'Times New Roman'; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 8px 0px;
+  padding: 8px 0px;
+}
+
+h1 { font-size: 200%; color: #000000; }
+h2 { font-size: 160%; color: #555555; }
+h3 { font-size: 140%; color: #333333; }
+h4 { font-size: 120%; }
+h5 { font-size: 110%; }
+h6 { font-size: 100%; }
+
+pre {
+  padding: 10px;
+  background-color: #dddddd;
+  border: 1px #aaaaaa solid;
+  white-space: pre-wrap;
+  border-radius: 6px;
+}
+
+blockquote {
+  border: 1px #aaaaaa solid;
+  padding: 5px 10px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+ul, ol {
+  padding-left: 18px;
+}
+
+button, input, select {
+  padding: 4px 8px;
+  margin: 4px 4px;
+  height: 32px;
+}
+
+input[type=number] {
+  width: 8em;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: separate !important;
+}
+
+td, th {
+  padding: 8px;
+  border: 1px #aaaaaa solid;
+  
+}
+
+th {
+  background-color: #222222;
+  color: #f0f0f0;
+}
+
+/* 為了讓 table 有 radius ，得用下列很長的方法 */
+.table {
+  border: solid #ccc 1px;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px #ccc;
+}
+.table tr:hover {
+  background: #ECECEC;    
+  transition: all 0.1s ease-in-out;
+}
+.table td, .table th {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.table th {
+  background-color: #000;
+}
+.table td:first-child, .table th:first-child {
+  border-left: none;
+}
+.table th:first-child {
+  border-radius: 6px 0 0 0;
+}
+.table th:last-child {
+  border-radius: 0 6px 0 0;
+}
+.table th:only-child{
+  border-radius: 6px 6px 0 0;
+}
+.table tr:last-child td:first-child {
+  border-radius: 0 0 0 6px;
+}
+.table tr:last-child td:last-child {
+  border-radius: 0 0 6px 0;
+}
+/* ================END============== */
