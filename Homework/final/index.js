@@ -37,10 +37,8 @@
 			'1,3': 1,
 			'26,3': 1,
 			'1,23': 1,
-			'18,17': 1,
-			'9,11': 1,
-			'8,29': 1,
-			'19,5': 1,
+			'9,15': 1,
+			'11,29': 1,
 			'26,23': 1
 		},
 		_WIN = false,
@@ -495,7 +493,7 @@
 						if (_GOODS[this.coord.x + ',' + this.coord.y]) {	//吃到能量豆
 							items.forEach(function (item) {
 								if (item.status == 1 || item.status == 3) {	//如果NPC为正常状态，则置为临时状态
-									item.timeout += 1500;
+									item.timeout = 1500;
 									item.status = 3;
 								}
 							});
