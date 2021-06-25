@@ -4,13 +4,13 @@
 https://7npmedia.w3cschool.cn/4-pac-man.zip
 
 ------------------------------
-
 References:  
 Original BGM: たぬきちの冒険   
 作曲: MAKOOTO (The composer for the original BGM)  
 HP:  
 You can find the original BGM here as well:
 https://dova-s.jp/bgm/play10441.html
+
 ------------------------------
 ## 功能
 包含
