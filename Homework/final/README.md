@@ -3,16 +3,13 @@
 本程式修改自 w3cschool.cn 的官方範例，網址如下：
 https://7npmedia.w3cschool.cn/4-pac-man.zip
 
-BGM從DOVA-SYNDROME取得，有CC授權，網址如下：
-https://dova-s.jp/bgm/play10441.html
-
 ------------------------------
 References:  
 Original BGM: たぬきちの冒険   
 作曲: MAKOOTO (The composer for the original BGM)  
 HP:  
 You can find the original BGM here as well:
-
+https://dova-s.jp/bgm/play10441.html
 ------------------------------
 ## 功能
 包含
