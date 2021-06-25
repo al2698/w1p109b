@@ -2,6 +2,8 @@
 ## 來源
 本程式修改自 w3cschool.cn 的官方範例，網址如下：
 https://7npmedia.w3cschool.cn/4-pac-man.zip
+BGM從reverbnation取得，有CC授權，網址如下：
+https://www.reverbnation.com/uwutrazh/song/32222247--usada-pekora-bgm-uwutrazh-remix
 ## 功能
 包含
 * 新增網址列小圖示ICON
