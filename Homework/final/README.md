@@ -38,12 +38,14 @@ https://dova-s.jp/bgm/play10441.html
 <head>
 	<style>
 		body {
-			background-image: url('background.jpg');
+			background-image: url('background.gif');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
-			background-size: 100% 100%;
+			background-size: 40% 40%;
+			background-position: 100% 100%;
+			background-color: rgb(33, 43, 58);
 		}
-	<style>
+	</style>
 </head>
 </html>
 ```
@@ -52,7 +54,7 @@ https://dova-s.jp/bgm/play10441.html
 ```html
 <body>
 	<audio id="myAudio" controls autoplay="true" loop="true">
-	<source src="國動lemons.mp3" type="audio/mpeg">
+		<source src="BGM.mp3" type="audio/mpeg">
 	</audio>
 </body>	
 ```
