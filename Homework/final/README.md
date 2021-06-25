@@ -5,7 +5,6 @@ https://7npmedia.w3cschool.cn/4-pac-man.zip
 
 BGM從DOVA-SYNDROME取得，有CC授權，網址如下：
 https://dova-s.jp/bgm/play10441.html
-------------------------------
 
 References:
 Original BGM: たぬきちの冒険 
