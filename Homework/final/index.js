@@ -34,11 +34,11 @@
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 	],
 		_GOODS = {			//能量豆
+			'9,15': 1,
+			'11,29': 1,
 			'1,3': 1,
 			'26,3': 1,
 			'1,23': 1,
-			'9,15': 1,
-			'11,29': 1,
 			'26,23': 1
 		},
 		_WIN = false,
@@ -50,9 +50,14 @@
 		_SCORE = 0;		//得分
 
 
-	var d = 0, t = 0;
+	var d = 0, t = 0, test = false;
 	function myTimer() {
 		t += d;
+		if (d & t % 6 == 0)
+			test = true;
+	}
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * max);
 	}
 
 	var game = new Game('canvas');
@@ -235,6 +240,30 @@
 			data: _DATA,
 			frames: 8,
 			draw: function (context) {
+				if (test) {
+					switch (getRandomInt(4)) {
+						case 0:
+							this.data[15][9] = 0;
+							break;
+						case 1:
+							this.data[29][11] = 0;
+							break;
+						case 2:
+							this.data[3][1] = 0;
+							break;
+						case 3:
+							this.data[3][26] = 0;
+							break;
+						case 4:
+							this.data[23][1] = 0;
+							break;
+						case 5:
+							this.data[23][26] = 0;
+							break;
+					}
+
+					test = false;
+				}
 				for (var j = 0; j < this.y_length; j++) {
 					for (var i = 0; i < this.x_length; i++) {
 						if (!this.get(i, j)) {
@@ -556,6 +585,7 @@
 	(function () {
 		var stage = game.createStage();
 		//游戏结束
+		clearInterval(myTimer);
 		stage.createItem({
 			x: game.width / 2,
 			y: game.height * .35,
@@ -595,6 +625,7 @@
 					t = 0;
 					var st = game.setStage(1);
 					st.reset();
+					var _TIMER = setInterval(myTimer, 1000);
 					break;
 			}
 		});
