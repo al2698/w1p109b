@@ -531,24 +531,20 @@
 					d = !d;
 					break;
 				case 39:
-				case 68:
-					//case 100: //右
+				case 68://右
 					player.control = { orientation: 0 };
 					break;
 
 				case 40: //下
 				case 83:
-					//case 115:
 					player.control = { orientation: 1 };
 					break;
 				case 37:
-				case 65:
-					//case 97: //左
+				case 65: //左
 					player.control = { orientation: 2 };
 					break;
 				case 38: //上
 				case 87:
-					//case 119:
 					player.control = { orientation: 3 };
 					break;
 			}
