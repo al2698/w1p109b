@@ -53,6 +53,31 @@
 	var d = 1, t = 0;
 	function myTimer() {
 		t += d;
+		(function () {
+			beans = stage.createMap({
+			x: 60,
+			y: 10,
+			data: _DATA,
+			frames: 8,
+			draw: function (context) {
+				for (var j = 0; j < this.y_length; j++) {
+					for (var i = 0; i < this.x_length; i++) {
+						if (!this.get(i, j)) {
+							var pos = this.coord2position(i, j);
+							context.fillStyle = "#F5F5DC";
+							if (_GOODS[i + ',' + j]) {
+								context.beginPath();
+								context.arc(pos.x, pos.y, 3 + this.times % 2, 0, 2 * Math.PI, true);
+								context.fill();
+								context.closePath();
+							} else {
+								context.fillRect(pos.x - 2, pos.y - 2, 4, 4);
+							}
+						}
+					}
+				}
+			}
+		});
 	}
 
 	var game = new Game('canvas');
