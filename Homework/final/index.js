@@ -35,7 +35,6 @@
 	],
 		_GOODS = {			//能量豆
 			'9,15': 1,
-			'11,29': 1,
 			'1,3': 1,
 			'26,3': 1,
 			'1,23': 1,
@@ -241,23 +240,20 @@
 			frames: 8,
 			draw: function (context) {
 				if (test) {
-					switch (getRandomInt(4)) {
+					switch (getRandomInt(5)) {
 						case 0:
 							this.data[15][9] = 0;
 							break;
 						case 1:
-							this.data[29][11] = 0;
-							break;
-						case 2:
 							this.data[3][1] = 0;
 							break;
-						case 3:
+						case 2:
 							this.data[3][26] = 0;
 							break;
-						case 4:
+						case 3:
 							this.data[23][1] = 0;
 							break;
-						case 5:
+						case 4:
 							this.data[23][26] = 0;
 							break;
 					}
