@@ -48,7 +48,7 @@
 		_COLOR = ['#F00', '#F93', '#0CF', '#F9C'],//红,橙,
 		_LIFE = 3,
 		_SCORE = 0;		//得分
-
+		var _TIMER;
 
 	var d = 0, t = 0, test = false;
 	function myTimer() {
@@ -117,7 +117,7 @@
 				case 13:
 				case 32:
 					game.nextStage();
-					var _TIMER = setInterval(myTimer, 1000);
+					_TIMER = setInterval(myTimer, 1000);
 					d = 1;
 					break;
 			}
@@ -585,7 +585,7 @@
 	(function () {
 		var stage = game.createStage();
 		//游戏结束
-		clearInterval(myTimer);
+		clearInterval(_TIMER);
 		stage.createItem({
 			x: game.width / 2,
 			y: game.height * .35,
@@ -625,7 +625,7 @@
 					t = 0;
 					var st = game.setStage(1);
 					st.reset();
-					var _TIMER = setInterval(myTimer, 1000);
+					
 					break;
 			}
 		});
