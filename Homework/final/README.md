@@ -70,23 +70,19 @@ stage.bind('keydown', function (e) {
 			break;
 		case 39://右
 		case 68:
-		//case 100: 
 			player.control = { orientation: 0 };
 			break;
 
 		case 40: //下
 		case 83:
-		//case 115:
 			player.control = { orientation: 1 };
 			break;
 		case 37://左
 		case 65:
-		//case 97: 
 			player.control = { orientation: 2 };
 			break;
 		case 38: //上
 		case 87:
-		//case 119:
 			player.control = { orientation: 3 };
 			break;
 			}
