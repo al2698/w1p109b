@@ -47,7 +47,7 @@
 		_COLOR = ['#F00', '#F93', '#0CF', '#F9C'],//红,橙,
 		_LIFE = 3,
 		_SCORE = 0;		//得分
-		var _TIMER;
+	var _TIMER;
 
 	var d = 0, t = 0, test = false;
 	function myTimer() {
@@ -621,7 +621,7 @@
 					t = 0;
 					var st = game.setStage(1);
 					st.reset();
-					
+
 					break;
 			}
 		});
